@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina HTML di Base</title>
+</head>
+<body>
+    <script>
+        let messaggio="globale";
+        function mostraMessaggio(){
+            let messaggio="locale";
+            console.log(messaggio);
+        }
+        mostraMessaggio(); // Stampa "locale"
+        console.log(messaggio); // Stampa "globale"
+        (function(){
+          let segreto="12345"  
+          console.log(segreto); // Stampa "12345"
+        })();
+        console.log(segreto); // Errore: segreto non è definito
+    </script>
+</body>
+</html>
