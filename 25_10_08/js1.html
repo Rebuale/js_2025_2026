@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic HTML Page</title>
+</head>
+<body>
+    <script>
+        var days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        var copyDays=days;
+        console.log(copyDays);
+        copyDays[0]="lunedì";
+        console.log(copyDays);
+        console.log(days);
+        //avranno entrambi "lunedì" perché gli array sono oggetti e vengono copiati per riferimento
+        var num=10;
+        var myNum=num;
+        myNum=4;
+        console.log(num);
+        console.log(myNum);
+        //avranno valori diversi perché i numeri sono tipi primitivi e vengono copiati per valore
+    </script>
+</body>
+</html>

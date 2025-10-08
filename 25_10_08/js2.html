@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina di Benvenuto</title>
+</head>
+<body>
+    <script>
+        var incassi1 = new Array(7);
+
+        for (let i = 0; i < incassi1.length; i++) {
+            let input = prompt("Inserisci l'incasso del giorno:");
+            incassi1[i] = (input);//li tiene come stinga(?)
+        }
+        var incassi2 = incassi1;
+        incassi2[0] = incassi2[0] * 90 / 100;
+        incassi2[6] = incassi2[6] * 90 / 100;
+        console.log(incassi1);
+        console.log(incassi2);
+
+        // Calcola la media degli incassi (convertendo le stringhe in numeri)
+        let somma = 0;
+        for (let i = 0; i < incassi1.length; i++) {
+            somma += Number(incassi1[i]);
+        }
+        let media = somma / incassi1.length;
+        console.log(media);
+        // avranno entrambi gli incassi scontati perché gli array sono oggetti e vengono copiati per riferimento
+
+        // Copia tramite spread operator (destrutturazione di un array)
+        var incassi3 = [...incassi1];
+        incassi3[0] = incassi3[0] * 90 / 100;
+        incassi3[6] = incassi3[6] * 90 / 100;
+        console.log(incassi1);
+        console.log(incassi3);
+
+        // incassi1 NON viene modificato: incassi3 è una copia indipendente grazie allo spread operator [...]
+        // [...operatore spread : destrutturazione di un array]
+    </script>
+</body>
+</html>
